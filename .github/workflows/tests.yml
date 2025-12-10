@@ -41,7 +41,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Build
         run: |
           mkdir -p build
@@ -61,7 +60,6 @@ jobs:
           name: test-add-report
           path: build/report.txt      # <-- le fichier à récupérer
           retention-days: 14          # optionnel
-
       - name: Job summary (facultatif mais pratique)
         run: |
           echo "### Résultat du test *add*" >> $GITHUB_STEP_SUMMARY
